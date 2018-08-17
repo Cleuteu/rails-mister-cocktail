@@ -9,5 +9,7 @@
     </div>
   <% end %>
   <%= f.input :name %>
-  <%= f.submit "add a cocktail", class: "btn btn-primary" %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+  <%= f.submit "yep, that's my cocktail", class: "btn btn-primary" %>
 <% end %>

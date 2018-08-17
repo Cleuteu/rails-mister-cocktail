@@ -2,6 +2,8 @@
 
 <p>A good choice my friend</p>
 
+<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+
 <h3>List of the doses</h3>
 <ul>
   <% @doses.each do |dose| %>
@@ -11,8 +13,6 @@
         <%= link_to "Delete", dose_path(dose),
         method: :delete,
         data: { confirm: "Are you sure?" } %> </p>
-      </li>
-      </li>
     <% end %>
   <% end %>
 </ul>
