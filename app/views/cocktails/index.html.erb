@@ -1,5 +1,13 @@
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://kitt.lewagon.com/placeholder/cities/berlin');">
+  <div class="banner-content">
+    <h1>Coquetails</h1>
+    <p>
+      <span id="banner-typed-text"></span>
+    </p>
+  </div>
+</div>
+
 <div class="container">
-  .
   <h1>List of the cocktails</h1>
   <ul>
     <div class="row">
@@ -10,11 +18,11 @@
           <div class="caption">
             <h3><%= cocktail.name%></h3>
             <div class = "links">
-              <p class = "btn btn-primary" role="button"><%= link_to 'Show', cocktail_path(cocktail)%></p>
-              <p class = "btn btn-primary" role="button"><%= link_to 'Edit', edit_cocktail_path(cocktail)%></p>
-              <p class = "btn btn-primary" role="button"><%= link_to "Delete", cocktail_path(cocktail),
+              <%= link_to 'Show', cocktail_path(cocktail), class: 'btn btn-primary'%>
+              <%= link_to 'Edit', edit_cocktail_path(cocktail), class: 'btn btn-primary'%>
+              <%= link_to "Delete", cocktail_path(cocktail),
             method: :delete,
-            data: { confirm: "Are you sure?" } %></p>
+            data: { confirm: "Are you sure?" }, class: 'btn btn-primary' %>
             </div>
           </div>
         </div>
