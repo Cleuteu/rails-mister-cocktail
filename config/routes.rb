@@ -3,4 +3,5 @@ Rails.application.routes.draw do
     resources :doses, only: [:create]
   end
   resources :doses, only: [:show]
+  delete "doses/:id", to: "doses#destroy"
 end
